@@ -66,7 +66,7 @@
                           	                      &kp LGUI &trans &kp ESC             &kp RET  &trans   &kp RALT
                         >;
                 };
-                };
+             };
 
         };
 };
