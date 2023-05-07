@@ -21,7 +21,7 @@
 / {
 
     macros {
-        zed_em_kay: bt_q {
+        bt_q: bt_q {
             label = "bt_q";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
