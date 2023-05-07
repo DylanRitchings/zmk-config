@@ -15,6 +15,11 @@
 #define LMAC 5
 
 
+
+
+
+/ {
+
 [KC_H] = {
         .type = KC_TYPE_NORMAL,
         .value = {
@@ -38,9 +43,6 @@
             }
         }
 }
-
-
-/ {
         keymap {
                 compatible = "zmk,keymap";
 
