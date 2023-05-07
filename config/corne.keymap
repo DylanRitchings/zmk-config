@@ -20,35 +20,24 @@
 
 / {
 
-[KC_H] = {
-        .type = KC_TYPE_NORMAL,
-        .value = {
-            .kc = KC_H,
-            .mods = MOD_MASK_NONE,
-            .params = {
-                [0] = C_KEYBOARD_INPUT_ASSIST_START_SEQUENCE,
-                [1] = C_KEYBOARD_H,
-                [2] = C_KEYBOARD_E,
-                [3] = C_KEYBOARD_L,
-                [4] = C_KEYBOARD_L,
-                [5] = C_KEYBOARD_O,
-                [6] = C_KEYBOARD_SPACE,
-                [7] = C_KEYBOARD_W,
-                [8] = C_KEYBOARD_O,
-                [9] = C_KEYBOARD_R,
-                [10] = C_KEYBOARD_L,
-                [11] = C_KEYBOARD_D,
-                [12] = C_KEYBOARD_EXCLAMATION_MARK,
-                [13] = C_KEYBOARD_INPUT_ASSIST_END_SEQUENCE
-            }
-        }
-}
+    macros {
+        zed_em_kay: bt_q {
+            label = "bt_q";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 0>
+                , <&macro_tap &kp Q>
+                ;
+        };
+    };
+    
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
-                              &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+                              &kp TAB   &bt_q &kp W &kp E &kp R &kp T               &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
                               &kp LCTRL &kp A &kp S &kp D &kp F &kp G               &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
                               &kp LSHFT &kp Z &kp X &kp C &kp V &kp B               &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                                            &lt 4 LGUI &mo LOWER &kp SPACE           &kp RET &mo RAISE &kp LALT
