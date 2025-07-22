@@ -1,16 +1,8 @@
-if SHIELD_CORNE_RIGHT
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
 
-config ZMK_KEYBOARD_NAME
-    default "Corne"
+config SHIELD_HELIX_LEFT
+    def_bool $(shields_list_contains,helix_left)
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default y
-
-endif
-
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-endif
+config SHIELD_HELIX_RIGHT
+    def_bool $(shields_list_contains,helix_right)
